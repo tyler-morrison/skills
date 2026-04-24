@@ -12,6 +12,12 @@ These skills help you think through problems before writing code.
   npx skills@latest add tyler-morrison/skills/to-opportunity
   ```
 
+- **to-solution** — Creates a Solution Definition and submits it as a JPD Solution ticket, linking it to a parent Opportunity.
+
+  ```
+  npx skills@latest add tyler-morrison/skills/to-solution
+  ```
+
 ## Tooling & Setup
 
 These skills provide Quality of Life enhancements for agentic coding workflows.
