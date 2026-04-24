@@ -6,6 +6,12 @@ A collection of agent skills that extend capabilities across planning, developme
 
 These skills help you think through problems before writing code.
 
+- **to-opportunity** — Turns the current conversation into an Opportunity Statement and submits it to Jira Product Discovery.
+
+  ```
+  npx skills@latest add tyler-morrison/skills/to-opportunity
+  ```
+
 ## Tooling & Setup
 
 These skills provide Quality of Life enhancements for agentic coding workflows.
