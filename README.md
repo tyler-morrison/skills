@@ -18,6 +18,12 @@ These skills help you think through problems before writing code.
   npx skills@latest add tyler-morrison/skills/to-solution
   ```
 
+- **to-prd** — Writes a Product Requirements Document (PRD) and submits it as a Jira Epic.
+
+  ```
+  npx skills@latest add tyler-morrison/skills/to-prd
+  ```
+
 ## Tooling & Setup
 
 These skills provide Quality of Life enhancements for agentic coding workflows.
