@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/package-skills.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/sync-skill-symlinks.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
