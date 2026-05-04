@@ -44,6 +44,30 @@ The Solution Definition should be submitted as a JPD issue via Atlassian MCP wit
 
 <solution-definition-template>
 
+### Title
+
+The title names the approach in one line. It should answer "What are we building?" clearly enough to distinguish this Solution from others that could address the same Opportunity.
+
+**Rules:**
+- 15 words or fewer
+- Start with an active verb (Embed, Ship, Introduce, Replace, Extend, Add)
+- Name the mechanism or experience — the *what*, not the *why*
+- Use plain language — no internal acronyms or jargon
+- Should read naturally after "We're going to..."
+
+- ✅ GOOD — Names the experience, implies scope, verb leads:
+
+  > _Embed a scheduling panel in the candidate profile sidebar_
+  > _Migrate report generation pipeline from Heroku to Kubernetes_
+
+- ❌ BAD — Sounds like an Opportunity (open-ended, empowerment framing):
+
+  > _Equip recruiters with a modern scheduling experience_
+
+- ❌ BAD — Too vague to distinguish from other potential Solutions:
+
+  > _Improve scheduling integration_
+
 ### Problem context
 
 Briefly summarize the problem this Solution addresses and link to the parent Opportunity for the full picture. The reader should understand why this work exists without clicking away, but the Opportunity has the detailed evidence.

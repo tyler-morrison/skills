@@ -42,6 +42,26 @@ The Opportunity Statement should be submitted as a JPD issue via Atlassian MCP w
 
 <opportunity-statement-template>
 
+### Title
+
+The title is the opportunity in one line. It should feel like the answer to "How might we...?" — energizing, not diagnostic.
+
+**Rules:**
+- 15 words or fewer
+- Start with an active verb (Equip, Build, Empower, Enable, Give)
+- Frame as empowerment or action, not as a problem description
+- Use plain language — no internal acronyms or jargon
+- Should read naturally after "How might we...?"
+
+- ✅ GOOD — Active, empowering, concise, jargon-free:
+
+  > _Equip every R&D squad with a repeatable delivery playbook_
+  > _Build delivery visibility that empowers R&D leadership to drive strategic alignment_
+
+- ❌ BAD — Too long, passive, problem-framed:
+
+  > _RDLT+ lacks reliable, continuous visibility into in-flight R&D work to support strategic planning_
+
 ### Problem
 
 What's broken, slow, painful, or missing? Be concrete. Name the friction, not the feature. A good problem statement could inspire multiple solutions from different teams.
