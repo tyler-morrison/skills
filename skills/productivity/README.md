@@ -1,0 +1,13 @@
+# Productivity
+
+General workflow tools, not code-specific.
+
+## User-invoked
+
+Reachable only when you type them (`disable-model-invocation: true`).
+
+- **[edit-copy](edit-copy/SKILL.md)** — Copy-edits a draft against Greenhouse style and judges whether it works. Delivers a verdict, a lightly-edited draft, and flags for the writer to carry forward.
+
+## Model-invoked
+
+Model- or user-reachable (rich trigger phrasing so the model can reach for them).
