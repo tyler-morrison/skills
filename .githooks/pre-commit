@@ -41,7 +41,8 @@ for entry in "${unique_changed[@]+"${unique_changed[@]}"}"; do
   [[ -f "$skill_dir/SKILL.md" ]] || continue
 
   output="$DIST_DIR/${skill_name}.skill"
-  (cd "$skill_dir" && zip -r "$output" . >/dev/null)
+  rm -f "$output"
+  (cd "$skill_dir" && COPYFILE_DISABLE=1 zip -r "$output" . >/dev/null)
   echo "packaged: $skill_name"
 done
 
