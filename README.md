@@ -1,6 +1,9 @@
-# Agent Skills
+# Personal Agent Skills
 
-A collection of agent skills that extend capabilities across planning, development, and tooling.
+My agent skills that I use every day to do real engineering - not vibe coding.
+
+I want to pause to acknowledge the fantastic work of Matt Pocock,
+whose [engineering philosophy](https://github.com/mattpocock/skills/blob/main/README.md#why-these-skills-exist), [educational materials](https://www.aihero.dev/), and [public skills](https://github.com/mattpocock/skills)
 
 ## Planning & Design
 
@@ -22,12 +25,6 @@ These skills help you think through problems before writing code.
 
   ```
   npx skills@latest add tyler-morrison/skills/to-prd
-  ```
-
-- **to-issues** — Breaks a plan, spec, or PRD into independently-grabbable Jira tickets using tracer-bullet vertical slices.
-
-  ```
-  npx skills@latest add tyler-morrison/skills/to-issues
   ```
 
 ## Writing & Editing
