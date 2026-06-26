@@ -1,5 +1,5 @@
 ---
-name: model-guardrails-claude-code
+name: model-guardrails
 description: >
   Set up Claude Code with two `SessionEnd` hooks that clear model overrides in a session.
   Use when user wants to prevent model selection drift, auto-reset their Claude Code model between sessions, or install model guardrails.
