@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DIST_DIR="$REPO_DIR/dist"
+BUCKETS=("engineering" "productivity" "misc")
+
+mkdir -p "$DIST_DIR"
+
+changed_skills=()
+deleted_skill_names=()
+
+for bucket in "${BUCKETS[@]}"; do
+  while IFS= read -r file; do
+    [[ -z "$file" ]] && continue
+    skill_name=$(echo "$file" | sed -n "s|skills/$bucket/\([^/]*\)/.*|\1|p")
+    [[ -z "$skill_name" ]] && continue
+    changed_skills+=("$bucket:$skill_name")
+  done < <(git -C "$REPO_DIR" diff --name-only --cached --diff-filter=ACMR -- "skills/$bucket/" 2>/dev/null)
+
+  while IFS= read -r file; do
+    [[ -z "$file" ]] && continue
+    skill_name=$(echo "$file" | sed -n "s|skills/$bucket/\([^/]*\)/.*|\1|p")
+    [[ -z "$skill_name" ]] && continue
+    deleted_skill_names+=("$skill_name")
+  done < <(git -C "$REPO_DIR" diff --name-only --cached --diff-filter=D -- "skills/$bucket/" 2>/dev/null)
+done
+
+# Repackage changed skills (dedup via sort -u)
+unique_changed=()
+if [[ ${#changed_skills[@]} -gt 0 ]]; then
+  mapfile -t unique_changed < <(printf '%s\n' "${changed_skills[@]}" | sort -u)
+fi
+
+for entry in "${unique_changed[@]+"${unique_changed[@]}"}"; do
+  bucket="${entry%%:*}"
+  skill_name="${entry##*:}"
+  skill_dir="$REPO_DIR/skills/$bucket/$skill_name"
+
+  [[ -d "$skill_dir" ]] || continue
+  [[ -f "$skill_dir/SKILL.md" ]] || continue
+
+  output="$DIST_DIR/${skill_name}.skill"
+  (cd "$skill_dir" && zip -r "$output" . >/dev/null)
+  echo "packaged: $skill_name"
+done
+
+# Clean up deleted skills (dedup via sort -u, only if not present in any bucket)
+unique_deleted=()
+if [[ ${#deleted_skill_names[@]} -gt 0 ]]; then
+  mapfile -t unique_deleted < <(printf '%s\n' "${deleted_skill_names[@]}" | sort -u)
+fi
+
+for skill_name in "${unique_deleted[@]+"${unique_deleted[@]}"}"; do
+  still_exists=false
+  for bucket in "${BUCKETS[@]}"; do
+    [[ -d "$REPO_DIR/skills/$bucket/$skill_name" ]] && still_exists=true && break
+  done
+
+  if [[ "$still_exists" == "false" ]]; then
+    output="$DIST_DIR/${skill_name}.skill"
+    if [[ -f "$output" ]]; then
+      rm "$output"
+      echo "removed: $skill_name"
+    fi
+  fi
+done
