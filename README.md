@@ -25,17 +25,9 @@ These skills help you think through problems before writing code.
 
 These skills help you write and edit Greenhouse-facing copy.
 
-- **gh-writing-style** — Greenhouse's writing style guide: voice, tone, mechanics, punctuation, and product naming. Referenced by other skills for the house ruleset.
+- **[gh-writing-style](skills/productivity/gh-writing-style/SKILL.md)** — Greenhouse's writing style guide: voice, tone, mechanics, punctuation, and product naming. Referenced by other skills for the house ruleset. *(Model-invoked)*
 
-  ```
-  npx skills@latest add tyler-morrison/skills/gh-writing-style
-  ```
-
-- **edit-copy** — Copy-edits a draft against Greenhouse style and judges whether it works. Delivers a verdict, a lightly-edited draft, and flags for the writer to carry forward.
-
-  ```
-  npx skills@latest add tyler-morrison/skills/edit-copy
-  ```
+- **[edit-copy](skills/productivity/edit-copy/SKILL.md)** — Copy-edits a draft against Greenhouse style and judges whether it works. Delivers a verdict, a lightly-edited draft, and flags for the writer to carry forward. *(User-invoked)*
 
 ## Tooling & Setup
 

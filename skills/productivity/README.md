@@ -11,3 +11,5 @@ Reachable only when you type them (`disable-model-invocation: true`).
 ## Model-invoked
 
 Model- or user-reachable (rich trigger phrasing so the model can reach for them).
+
+- **[gh-writing-style](gh-writing-style/SKILL.md)** — Greenhouse's writing style guide: voice, tone, mechanics, punctuation, and product naming. Referenced by other skills for the house ruleset.
