@@ -7,6 +7,7 @@ General workflow tools, not code-specific.
 Reachable only when you type them (`disable-model-invocation: true`).
 
 - **[edit-copy](edit-copy/SKILL.md)** — Copy-edits a draft against Greenhouse style and judges whether it works. Delivers a verdict, a lightly-edited draft, and flags for the writer to carry forward.
+- **[to-project-update](to-project-update/SKILL.md)** — Drafts an Atlassian Project update (status, learning, risk, or decision) from the current conversation context.
 
 ## Model-invoked
 

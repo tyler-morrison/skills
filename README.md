@@ -28,6 +28,7 @@ These skills help you write and edit Greenhouse-facing copy.
 - **[gh-writing-style](skills/productivity/gh-writing-style/SKILL.md)** — Greenhouse's writing style guide: voice, tone, mechanics, punctuation, and product naming. Referenced by other skills for the house ruleset. *(Model-invoked)*
 
 - **[edit-copy](skills/productivity/edit-copy/SKILL.md)** — Copy-edits a draft against Greenhouse style and judges whether it works. Delivers a verdict, a lightly-edited draft, and flags for the writer to carry forward. *(User-invoked)*
+- **[to-project-update](skills/productivity/to-project-update/SKILL.md)** — Drafts an Atlassian Project update (status, learning, risk, or decision) from the current conversation context. *(User-invoked)*
 
 ## Tooling & Setup
 
