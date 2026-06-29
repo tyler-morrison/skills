@@ -1,5 +1,6 @@
 ---
 name: gh-writing-style
+model: claude-haiku-4-5-20251001
 description: >
   Greenhouse's writing style — voice, tone, mechanics, punctuation, and product naming.
   Use when writing or editing any Greenhouse-facing copy: updates, docs, emails, posts,

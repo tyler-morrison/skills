@@ -3,6 +3,8 @@ name: edit-copy
 description: Copy-edit a draft against Greenhouse style and judge whether it works.
 argument-hint: "[light | deep]"
 disable-model-invocation: true
+model: claude-sonnet-4-6
+effort: xhigh
 ---
 
 # Edit
@@ -17,7 +19,7 @@ Get the purpose, audience, and intended outcome before changing a word — you c
 
 ### 2. Apply Greenhouse style
 
-Run the draft against the house rules — voice, tone, mechanics, naming — in the `greenhouse-style` skill. Flag a recurring issue once and trust the writer to carry it forward; don't correct every instance.
+Run the draft against the house rules — voice, tone, mechanics, naming — in the `gh-writing-style` skill. Flag a recurring issue once and trust the writer to carry it forward; don't correct every instance.
 
 ### 3. Judge whether it works
 
